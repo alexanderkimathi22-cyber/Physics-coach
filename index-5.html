@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b76">
+<title>Physics Coach V5 | KCSE Physics</title>
+<style>
+:root{--navy:#123b76;--blue:#1769aa;--teal:#00a896;--gold:#ffca3a;--paper:#f3f8ff;--ink:#182235}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+header{background:linear-gradient(130deg,#123b76,#1769aa 60%,#00a896);color:white;padding:25px 16px 30px;text-align:center}
+header h1{margin:0;font-size:clamp(1.8rem,6vw,3rem);letter-spacing:1px}header p{margin:8px auto;max-width:700px}
+nav{position:sticky;top:0;z-index:5;background:#0d2b54;display:flex;gap:8px;overflow-x:auto;padding:10px}
+nav a{color:white;text-decoration:none;white-space:nowrap;padding:8px 12px;border-radius:18px;font-weight:bold;font-size:.92rem}nav a:hover,nav a:focus{background:var(--teal)}
+main{max-width:1050px;margin:auto;padding:16px}.hero-card,.card{background:white;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 5px 18px #102b5012;border:1px solid #e0eaf7}
+.hero-card{border-top:6px solid var(--gold)}h2{color:var(--navy);margin-top:0}h3{color:#1769aa}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.topic{border-left:5px solid var(--teal)}.formula{background:#eaf8f6;border-radius:9px;padding:10px 12px;font-weight:bold;display:inline-block;margin:5px 0}
+button{border:0;border-radius:10px;background:var(--blue);color:white;font-weight:bold;padding:12px 16px;cursor:pointer;font-size:1rem;min-height:44px}button:hover{filter:brightness(.92)}button.secondary{background:var(--teal)}button.gold{background:var(--gold);color:#17233b}
+input,select{font:inherit;padding:10px;border:1px solid #9eb6d3;border-radius:8px;max-width:100%}.question{font-size:1.05rem;font-weight:bold}.answer{display:none;background:#eaf8f0;border-left:4px solid #23945f;padding:12px;margin-top:10px;border-radius:6px}.answer.show{display:block}
+.diagram{overflow-x:auto;background:#f7fbff;border-radius:12px;padding:10px;text-align:center}.diagram svg{width:100%;max-width:700px;height:auto}
+footer{text-align:center;background:#0d2b54;color:white;padding:20px;margin-top:24px}
+.small{font-size:.92rem;color:#50617a}.badge{display:inline-block;background:#fff1b8;padding:4px 9px;border-radius:20px;font-weight:bold}
+
+.brand-logo{display:block;width:min(100%,230px);height:auto;margin:0 auto 12px;filter:drop-shadow(0 5px 8px #061a3a55)}
+.brand-name{font-weight:900;letter-spacing:1.5px}
+@media(max-width:420px){.brand-logo{width:175px}header{padding-top:20px}}
+
+</style>
+</head>
+<body>
+<header>
+  <svg class="brand-logo" viewBox="0 0 300 150" role="img" aria-label="Physics Coach V5 logo with atom, open book and lightning bolt" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b8e5ff"/></linearGradient>
+    <linearGradient id="logoGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b8ffe6"/><stop offset="1" stop-color="#00a896"/></linearGradient>
+  </defs>
+  <ellipse cx="150" cy="58" rx="69" ry="27" fill="none" stroke="#ffffff" stroke-width="3" transform="rotate(-28 150 58)"/>
+  <ellipse cx="150" cy="58" rx="69" ry="27" fill="none" stroke="#ffca3a" stroke-width="3" transform="rotate(28 150 58)"/>
+  <ellipse cx="150" cy="58" rx="69" ry="27" fill="none" stroke="#9cf5dc" stroke-width="3" transform="rotate(90 150 58)"/>
+  <circle cx="150" cy="58" r="10" fill="#ffca3a" stroke="#fff" stroke-width="2"/>
+  <circle cx="91" cy="31" r="6" fill="#9cf5dc" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="209" cy="84" r="6" fill="#ffca3a" stroke="#fff" stroke-width="1.5"/>
+  <path d="M74 101 Q112 89 150 108 Q188 89 226 101 L226 132 Q188 120 150 139 Q112 120 74 132 Z" fill="url(#logoBlue)" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M150 108 L150 138 M84 108 Q116 103 141 116 M159 116 Q184 103 216 108" fill="none" stroke="#1769aa" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M177 89 L158 112 L173 112 L163 130 L193 101 L177 101 Z" fill="#ffca3a" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+</svg>
+
+  <div class="badge">KCSE PHYSICS REVISION • KENYA</div>
+  <h1 class="brand-name">PHYSICS COACH V5</h1>
+  <p>Understand the concepts. Practise the formulas. Build confidence for your KCSE Physics exam.</p>
+  <a href="#lessons"><button class="gold">Start Learning ↓</button></a>
+</header>
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a><a href="#lessons">Lessons</a><a href="#interference">Interference</a><a href="#practice">Practice</a><a href="#advice">Study Advice</a>
+</nav>
+<main>
+<section id="home" class="hero-card">
+<h2>Welcome, Physics student!</h2>
+<p>Physics explains how the world works. Use these notes for revision, then answer the practice questions and check the explanations. This single-file website can be saved on your phone and opened offline.</p>
+<div class="grid">
+<div class="card"><h3>📘 Learn</h3><p>Review key ideas and formulas topic by topic.</p></div>
+<div class="card"><h3>✍️ Practise</h3><p>Try KCSE-style questions and reveal worked answers.</p></div>
+<div class="card"><h3>🎯 Improve</h3><p>Keep a list of mistakes and revise them again.</p></div>
+</div>
+</section>
+<section id="lessons">
+<h2>Physics lessons</h2>
+<div class="grid">
+<article class="card topic"><h3>1. Motion</h3><p><b>Distance</b> is the total path travelled. <b>Displacement</b> is the change in position in a direction. Speed is distance per time; velocity is displacement per time.</p><div class="formula">Speed = distance ÷ time</div><br><div class="formula">Acceleration, a = (v − u) ÷ t</div><p>For uniform acceleration:</p><div class="formula">v = u + at</div><div class="formula">s = ut + ½at²</div><p><i>Symbols:</i> u = initial velocity, v = final velocity, a = acceleration, t = time, s = displacement.</p></article>
+<article class="card topic"><h3>2. Forces</h3><p>A force can change an object's speed, direction or shape. The SI unit is the newton (N). Balanced forces give zero resultant force.</p><div class="formula">Resultant force, F = ma</div><div class="formula">Weight, W = mg</div><p>Mass is measured in kilograms; weight is a force measured in newtons. Friction opposes relative motion.</p></article>
+<article class="card topic"><h3>3. Work, energy and power</h3><p>Work is done when a force moves an object through a distance in the force's direction. Energy is the capacity to do work.</p><div class="formula">Work = force × distance</div><div class="formula">Kinetic energy = ½mv²</div><div class="formula">Gravitational P.E. = mgh</div><div class="formula">Power = work ÷ time</div><p>Energy changes form, but total energy is conserved in a closed system.</p></article>
+<article class="card topic"><h3>4. Electricity</h3><p>Electric current is the rate of flow of charge. Potential difference is energy transferred per unit charge. Resistance opposes current.</p><div class="formula">Current, I = Q ÷ t</div><div class="formula">V = IR</div><div class="formula">Electrical power, P = VI</div><p>In a series circuit, current is the same through each component. In a parallel circuit, potential difference is the same across each branch.</p></article>
+<article class="card topic"><h3>5. Waves</h3><p>A wave transfers energy without overall transfer of matter. Transverse waves vibrate perpendicular to travel; longitudinal waves vibrate parallel to travel.</p><div class="formula">Wave speed, v = fλ</div><p>Frequency f is measured in hertz (Hz), wavelength λ in metres (m), and wave speed in metres per second (m/s). Reflection is bouncing back; refraction is a change in direction due to a change in speed.</p></article>
+<article class="card topic"><h3>6. Interference</h3><p>Interference occurs when waves overlap. Constructive interference produces a larger amplitude; destructive interference reduces the resultant amplitude.</p><div class="formula">Bright fringe: path difference = nλ</div><div class="formula">Dark fringe: path difference = (n + ½)λ</div><p>Here n = 0, 1, 2, … for bright fringes, and λ is the wavelength.</p></article>
+</div>
+</section>
+<section id="interference" class="card">
+<h2>Young’s double-slit experiment</h2>
+<p>Light from two narrow, closely spaced slits spreads out and overlaps on a screen. The overlapping waves form alternating bright and dark fringes. A stable pattern is observed when the slits are illuminated by coherent light.</p>
+<div class="diagram">
+<svg viewBox="0 0 700 280" role="img" aria-label="Diagram of Young's double slit experiment showing light source, two slits, screen, slit separation a, screen distance D and fringe spacing beta">
+<rect x="22" y="94" width="75" height="90" rx="8" fill="#dcecff" stroke="#1769aa" stroke-width="2"/>
+<text x="59" y="124" font-size="13" text-anchor="middle" fill="#123b76">Light</text><text x="59" y="142" font-size="13" text-anchor="middle" fill="#123b76">source</text>
+<path d="M97 117 L170 117 M97 161 L170 161" stroke="#e8a900" stroke-width="3" stroke-dasharray="6 4"/>
+<rect x="170" y="70" width="12" height="135" fill="#35445b"/><rect x="166" y="112" width="20" height="10" fill="white"/><rect x="166" y="156" width="20" height="10" fill="white"/>
+<text x="176" y="55" font-size="14" text-anchor="middle" fill="#123b76">Two slits</text>
+<path d="M182 117 L490 65 M182 117 L490 112 M182 161 L490 157 M182 161 L490 215" stroke="#00a896" stroke-width="1.8" opacity=".85"/>
+<path d="M500 45 L500 240" stroke="#123b76" stroke-width="8"/>
+<path d="M493 75 L507 75 M493 98 L507 98 M493 121 L507 121 M493 144 L507 144 M493 167 L507 167 M493 190 L507 190 M493 213 L507 213" stroke="#ffca3a" stroke-width="5"/>
+<text x="532" y="38" font-size="14" fill="#123b76">Screen</text>
+<path d="M210 250 L495 250" stroke="#123b76" stroke-width="1.5"/><path d="M210 244 L210 256 M495 244 L495 256" stroke="#123b76" stroke-width="1.5"/>
+<text x="350" y="270" font-size="15" text-anchor="middle" fill="#123b76">Distance from slits to screen, D</text>
+<path d="M205 117 L205 161" stroke="#d94b4b" stroke-width="2"/><path d="M199 117 L211 117 M199 161 L211 161" stroke="#d94b4b" stroke-width="2"/>
+<text x="218" y="145" font-size="14" fill="#b22">Slit separation a</text>
+<text x="540" y="160" font-size="14" fill="#123b76">Fringe</text><text x="540" y="178" font-size="14" fill="#123b76">spacing β</text>
+</svg>
+</div>
+<h3>Fringe-spacing formula</h3>
+<div class="formula">β = λD / a</div>
+<ul><li><b>β</b> = distance between adjacent bright fringes (m)</li><li><b>λ</b> = wavelength of light (m)</li><li><b>D</b> = distance from the slits to the screen (m)</li><li><b>a</b> = separation of the two slits (m)</li></ul>
+<p><b>Example:</b> If λ = 6.0 × 10⁻⁷ m, D = 2.0 m and a = 3.0 × 10⁻⁴ m:</p>
+<p>β = (6.0 × 10⁻⁷ × 2.0) ÷ (3.0 × 10⁻⁴) = <b>4.0 × 10⁻³ m</b>, or 4.0 mm.</p>
+</section>
+<section id="practice">
+<h2>KCSE-style practice</h2>
+<p>Try each question before tapping <b>Show answer</b>. These are revision questions written for practice, not official examination questions.</p>
+<div class="card"><p class="question">1. A car travels 150 m in 10 s. Calculate its average speed.</p><button onclick="toggleAnswer('a1',this)">Show answer</button><div id="a1" class="answer">Speed = distance ÷ time = 150 ÷ 10 = <b>15 m/s</b>.</div></div>
+<div class="card"><p class="question">2. A resultant force of 12 N acts on a 3 kg object. Find its acceleration.</p><button onclick="toggleAnswer('a2',this)">Show answer</button><div id="a2" class="answer">Using F = ma, a = F ÷ m = 12 ÷ 3 = <b>4 m/s²</b>.</div></div>
+<div class="card"><p class="question">3. A 2 kg object is lifted vertically through 5 m. Take g = 10 N/kg. Find the gain in gravitational potential energy.</p><button onclick="toggleAnswer('a3',this)">Show answer</button><div id="a3" class="answer">P.E. = mgh = 2 × 10 × 5 = <b>100 J</b>.</div></div>
+<div class="card"><p class="question">4. A resistor of 4 Ω is connected across 12 V. Calculate the current.</p><button onclick="toggleAnswer('a4',this)">Show answer</button><div id="a4" class="answer">Using V = IR, I = V ÷ R = 12 ÷ 4 = <b>3 A</b>.</div></div>
+<div class="card"><p class="question">5. A wave has frequency 50 Hz and wavelength 0.4 m. Find its speed.</p><button onclick="toggleAnswer('a5',this)">Show answer</button><div id="a5" class="answer">v = fλ = 50 × 0.4 = <b>20 m/s</b>.</div></div>
+<div class="card"><p class="question">6. In Young’s experiment, λ = 5.0 × 10⁻⁷ m, D = 1.5 m and a = 2.5 × 10⁻⁴ m. Calculate β.</p><button onclick="toggleAnswer('a6',this)">Show answer</button><div id="a6" class="answer">β = λD/a = (5.0 × 10⁻⁷ × 1.5) ÷ (2.5 × 10⁻⁴) = <b>3.0 × 10⁻³ m</b> = 3.0 mm.</div></div>
+<div class="card"><p class="question">7. State one difference between transverse and longitudinal waves.</p><button onclick="toggleAnswer('a7',this)">Show answer</button><div id="a7" class="answer">In transverse waves, vibrations are perpendicular to the direction of travel. In longitudinal waves, vibrations are parallel to the direction of travel.</div></div>
+<div class="card"><p class="question">8. What is the difference between series and parallel circuits?</p><button onclick="toggleAnswer('a8',this)">Show answer</button><div id="a8" class="answer">A series circuit has one path for current. A parallel circuit has separate branches, giving more than one path for current.</div></div>
+</section>
+<section id="advice" class="card">
+<h2>Study advice for KCSE</h2>
+<ul>
+<li>Study a small topic daily instead of cramming everything at once.</li>
+<li>Write down each formula, define every symbol and include SI units.</li>
+<li>Practise rearranging formulas before substituting numbers.</li>
+<li>Draw clear, labelled diagrams for experiments and circuits.</li>
+<li>Show your working in calculations and check units in the final answer.</li>
+<li>After marking your practice, redo every question you missed without looking at the solution.</li>
+<li>Use your teacher’s notes and the current KCSE syllabus to guide complete revision.</li>
+</ul>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button>
+</section>
+<p class="small">Physics Coach V5 is an independent revision aid. Check your teacher’s guidance and current KICD/KCSE syllabus for the complete course requirements.</p>
+</main>
+<footer><b>PHYSICS COACH V5</b><br>Learn • Practise • Improve<br><span class="small" style="color:#dbe8ff">Made for Kenyan secondary school Physics revision.</span></footer>
+<script>
+function toggleAnswer(id,button){
+  const answer=document.getElementById(id);
+  const open=answer.classList.toggle('show');
+  button.textContent=open?'Hide answer':'Show answer';
+}
+</script>
+</body>
+</html>
